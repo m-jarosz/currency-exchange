@@ -1,0 +1,8 @@
+.mainContent__paragraph--result {
+    display: none;
+    text-align: center;
+}
+
+.visible {
+    display: inherit;
+}

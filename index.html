@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wirtualny kantor walut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/result.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">Przelicznik walut</h1>
+        </header>
+        <main class="mainContent">
+            <form action="" class="mainContent__form js-calculateForm">
+                <fieldset class="mainContent__fieldset">
+                    <legend class="mainContent__legend">Kwota</legend>
+                    <p class="mainContent__paragraph">
+                        <label class="mainContent__label">
+                            <span class="mainContent__span">Podaj kwotę*:</span>
+                            <input type="number" class="mainContent__input js-amount" name="amount" step="0.01" min="0.01" required>
+                        </label>
+                    </p>
+                    <p class="mainContent__paragraph--note">* Pole obowiązkowe</p>
+                </fieldset>
+                <fieldset class="mainContent__fieldset">
+                    <legend class="mainContent__legend">Wybór waluty</legend>
+                    <p class="mainContent__paragraph">
+                        <label class="mainContent__label">
+                            <span class="mainContent__span">Chcę kupić:</span>
+                            <select name="convertTo" class="mainContent__select js-selectConvertTo">
+                                <option value="euro" class="mainContent__option">euro</option>
+                                <option value="usd" class="mainContent__option">dolar amerykański</option>
+                                <option value="gbp" class="mainContent__option">funt brytyjski</option>
+                            </select>
+                        </label>
+                    </p>
+                </fieldset>
+                
+                <button class="mainContent__button js-calculate">Przelicz</button>
+            </form>
+            <div class="mainContent__result">
+                <p class="mainContent__paragraph--result js-resultBox">
+                    Za <span class="mainContent__span--result js-convertWith"></span> otrzymasz <span class="mainContent__span--result js-convertTo"></span>
+                </p>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
