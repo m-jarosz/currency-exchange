@@ -1,6 +1,10 @@
 .mainContent__paragraph--result {
     display: none;
     text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 .visible {
